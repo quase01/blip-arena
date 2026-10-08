@@ -14,6 +14,18 @@ npm start
 - 같은 와이파이의 친구: 서버 실행 시 콘솔에 출력되는 `http://192.168.x.x:3000` 주소
   (처음 실행 시 Windows 방화벽 허용 창이 뜨면 "허용")
 
+## 인터넷으로 공개 (PC가 켜져 있는 동안만)
+
+```bash
+npm run share
+```
+
+게임 서버와 Cloudflare 터널을 함께 켜고, 콘솔에 `https://xxxx.trycloudflare.com` 주소를 출력합니다. 이 주소를 친구에게 보내면 다른 와이파이에서도 접속할 수 있습니다.
+
+- 처음 한 번 cloudflared 설치가 필요합니다: `winget install --id Cloudflare.cloudflared`
+- 켤 때마다 주소가 바뀝니다. 끄려면 그 창에서 `Ctrl + C`
+- Cloudflare Pages(`*.pages.dev`)로는 실행되지 않습니다. 이 게임은 Node 서버가 계속 돌아야 하기 때문입니다.
+
 ## 혼자 테스트 (탭 여러 개)
 
 1. 탭 A에서 닉네임 입력 → **방 만들기** → 4자리 코드 확인

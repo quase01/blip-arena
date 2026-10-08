@@ -5,7 +5,8 @@
   "main": "server/index.js",
   "scripts": {
     "start": "node server/index.js",
-    "lag": "node server/index.js --lag=100 --jitter=30"
+    "lag": "node server/index.js --lag=100 --jitter=30",
+    "share": "node server/share.js"
   },
   "engines": {
     "node": ">=18"
